@@ -24,11 +24,9 @@ html {
 }
 
 body {
-    background-image: url('./images/bg-pattern-top.svg'), url('./images/bg-pattern-bottom.svg');
+    background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+    background-position: right 50vw bottom 40vh, left 50vw top 30vh;
     background-repeat: no-repeat, no-repeat;
-    background-position: 
-        top -70vh left -200vw,
-        bottom -30vh right -200vw;
     background-color: var(--dark-cyan);
     height: 100vh;
 }
@@ -104,13 +102,20 @@ footer {
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
- 
+@media screen and (min-width: 415px) and (max-width: 1024px) {
+    body {
+        background-position: 
+            right 50vw bottom 70vh, 
+            left 40vw top 50vh;
+    }
+}
 @media only screen and (min-width: 1025px) {
     body {
         background-position: 
-            top -250% left -20%,
-            bottom -100% right -25%;
+            right 50vw bottom 60vh, 
+            left 50vw top 60vh;
     }
+    
     .container {
         margin: 15% auto;
     }
